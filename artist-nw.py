@@ -6,9 +6,8 @@ import matplotlib.pyplot as plt
 
 # Must pass argument as string
 
-# Command Line Argument -- Artist name
-# artistName = sys.argv[1]
-# print(artistName)
+#artistName = sys.argv[1]
+#print(artistName)
 
 # Related Artist params: name, id, genres, followers->total, images, popularity
 
@@ -30,27 +29,11 @@ def makeArtistNetwork(artistID):
         
         # Add edge between main artist and secondary - main artist hub
         G.add_edge(str(artist['name']), str(a['name']))
-        G[artist['name']][a['name']]['weight'] = artistSimilarityScore(artist['id'], a['id'])
-
-        # nx.write_graphml_lxml(G, ('demo.graphml'))
-    
-    '''
-    # Adding edges for all outer nodes
-    crossed = []
-    for a in G.nodes:
-        # print(a)
-        for b in related:
-                if ((a != b['name']) and (b['name'] not in crossed)):
-                    # print(a['name'])
-                    # print(b['name'])
-                    G.add_edge(a, b['name'])
-        crossed.append(a)
-    '''
-    
+        G[artist['name']][a['name']]['weight'] = artistSimilarityScore(artist['id'], a['id'])    
     
     return G
 
-# Score of similar artists between artists
+# Score of similar genres between artists
 def genreScore(artist1ID, artist2ID):
     
     count = 0
@@ -121,31 +104,3 @@ def recommendArtist(graph, artistName):
     return artistRec
 
 
-G = makeArtistNetwork(spotify.getArtistID(artistName))
-recArtist = recommendArtist(G, artistName)
-print(spotify.getArtistID(recArtist))
-
-'''
-bjork = spotify.artistDataName('Bjork') ['id']
-billie = spotify.artistDataName('Billie Eilish')['id']
-drake = spotify.artistDataName('Drake')['id'] 
-interpol = spotify.artistDataName('Interpol')['id']
-muse = spotify.artistDataName('Muse')['id']
-arctic = spotify.artistDataName('Arctic Monkeys')['id']
-
-i = makeArtistNetwork(arctic)
-
-recommendArtist(i, spotify.getArtistName(arctic))
-'''
-
-# d = makeArtistNetwork(drake)
-# artistSimilarityScore(drake, '5aIqB5nVVvmFsvSdExz408') # 36.3% Bach 
-# j = makeArtistNetwork(bjork)
-
-# g = makeArtistNetwork(billie)
-# print(g.neighbors)
-
-# genreScore(billie, drake)
-# artistSimilarityScore(billie, drake)
-# artistSimilarityScore(billie, '6beUvFUlKliUYJdLOXNj9C') 88.3% King Princess
-# artistSimilarityScore(billie, '5aIqB5nVVvmFsvSdExz408') # 36.3% Bach 

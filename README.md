@@ -57,5 +57,3 @@ In the `spotifyData.py` file, replace the `client_id` value in the `credentials`
 
 
 ---
-
-![Twitter URL](https://img.shields.io/twitter/url?label=Khalea&style=social&url=https%3A%2F%2Ftwitter.com%2Ftemplvr)

@@ -58,4 +58,4 @@ In the `spotifyData.py` file, replace the `client_id` value in the `credentials`
 
 ---
 
-![Twitter Follow](https://img.shields.io/twitter/follow/templvr?color=%2368299B&label=khalea&logoColor=%23000000&style=social)
+![Twitter URL](https://img.shields.io/twitter/url?label=Khalea&style=social&url=https%3A%2F%2Ftwitter.com%2Ftemplvr)

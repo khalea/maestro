@@ -51,7 +51,7 @@ In the `spotifyData.py` file, replace the `client_id` value in the `credentials`
 
 *Coming Soon!*
 
-#### Generating Networks
+#### Generating Artist Networks
 
 *Coming Soon!*
 

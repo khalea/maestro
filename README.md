@@ -8,7 +8,7 @@ Maestro is one component of a project for [GEICO Hacktivates 2019](https://www.g
 
 Alongside Trevor Cunningham, Aidan Miller, and Adam Ratzmann, I represented Indiana University - Bloomington against the University of Maryland - College Park in the semi-final round. 
 
-We will be representing IU again on November 8th against the University of California - Riverside in the final round. The full repository for the first leg of the team's project can be found over at [Adam Ratzmann's Github.](https://github.com/adamint/geico-hackathon-kotlin)
+We will be representing IU again on November 8th against the University of California - Riverside in the final round. The full repository for the first leg of the team's project can be found over at [Adam Ratzmann's Github.](https://github.com/adamint/geico-hackathon-2)
 
 ___
 
